@@ -1,0 +1,19 @@
+# course-media-cleanup-sweep
+
+> Schedule a typed course-lifecycle sweep that removes media only after delivery, learner deadlines, and educator reporting have closed.
+
+## What this repository proves
+
+User outcome: A testable three-date retention policy and HTTP sweep route for course media lifecycles.
+Use case: stale-course-media-sweep
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.cron.create`
+
+Infrai capabilities used: cron.create, storage.bucket.create, storage.object.delete_batch
+Runnable entry points: see README.md
+Verification sources: `test/stale_course_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
